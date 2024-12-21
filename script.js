@@ -1,20 +1,18 @@
-// script.js
 // Function to toggle the dropdown menu visibility
 function toggleMenu() {
     const menu = document.getElementById('dropdown-links');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block'; // Show the menu
     } else {
-        menu.style.display = 'block';
+        menu.style.display = 'none'; // Hide the menu
     }
 }
 
 // Attach the click event to the dropdown menu button
 document.querySelector('.dropdown-menu').addEventListener('click', toggleMenu);
 
-
 // Smooth scrolling for links (if pointing to sections within the same page)
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('nav a, .dropdown-links a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const hrefValue = this.getAttribute('href');
         if (hrefValue.startsWith('#')) {
