@@ -68,6 +68,39 @@
             margin-left: 25px;
         }
 
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            display: none; /* Hide dropdown button by default */
+        }
+
+        #dropdown-links {
+            display: none; /* Initially hide dropdown links */
+            position: fixed;
+            top: 60px;
+            left: 10px;
+            background-color: #ffffff; /* White background */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        #dropdown-links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: black; /* Black font for links */
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #dropdown-links a:hover {
+            background-color: #f4f4f4;
+            color: #0077cc; /* Blue text on hover */
+        }
+
         /* Responsive Design: Adjust for small screens */
         @media (max-width: 768px) {
             nav {
@@ -80,36 +113,15 @@
                 top: 10px;
                 left: 10px;
                 background-color: #ffffff; /* White background */
-                border: 1px solid #ddd; /* Subtle border */
+                color: black; /* Black text */
+                border: 1px solid black; /* Black border */
                 border-radius: 5px;
-                padding: 10px;
+                padding: 10px 15px;
                 cursor: pointer;
+                font-size: 1em;
                 z-index: 1000; /* Ensure it stays on top */
-            }
-
-            #dropdown-links {
-                display: none; /* Initially hide dropdown links */
-                position: fixed;
-                top: 50px;
-                left: 10px;
-                background-color: #ffffff; /* White background */
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                padding: 10px;
-                z-index: 1000;
-            }
-
-            #dropdown-links a {
-                display: block;
-                margin: 5px 0;
-                text-decoration: none;
-                color: black;
-                padding: 5px;
-            }
-
-            #dropdown-links a:hover {
-                background-color: #f4f4f4;
-                color: #0077cc; /* Blue text on hover */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+                text-align: center;
             }
         }
     </style>
@@ -125,7 +137,7 @@
     </nav>
 
     <!-- Dropdown Menu for Small Screens -->
-    <div class="dropdown-menu" onclick="toggleMenu()">☰ Menu</div>
+    <button class="dropdown-menu" onclick="toggleMenu()">☰ Menu</button>
     <div class="dropdown-links" id="dropdown-links">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
