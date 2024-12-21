@@ -41,7 +41,121 @@
 
         /* Logo styling */
         .logo {
-            font-family: "Courier New", Courier, monospace;
+            font-family: "Courier New", Courier, monospace; /* Typewriter font */
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Content styling */
+        .content {
+            flex: 1; /* Take up remaining space */
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design: Hide sidebar on small screens */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Hide the sidebar */
+            }
+
+            .dropdown-menu {
+                display: block; /* Show the dropdown button */
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                background-color: #ffffff; /* White background */
+                border: 1px solid #ddd; /* Subtle border */
+                border-radius: 5px;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 1000; /* Ensure it stays on top */
+            }
+        }
+
+        /* Default state: hide dropdown menu and button */
+        .dropdown-menu {
+            display: none; /* Hide by default */
+        }
+
+        /* Show dropdown menu links when toggled */
+        .dropdown-links {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #ffffff; /* White background */
+            border: 1px solid #ddd; /* Subtle border */
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .dropdown-links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+        }
+
+        .dropdown-links a:hover {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav>
+        <div class="logo">Michael Yin</div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+    </nav>
+
+    <!-- Dropdown Menu for Small Screens -->
+    <div class="dropdown-menu" onclick="toggleMenu()">☰ Menu</div>
+    <div class="dropdown-links" id="dropdown-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>
+            This is a simple and minimalist design. The navigation bar appears on the left for larger screens 
+            and switches to a dropdown menu on smaller screens. Explore the sections to learn more!
+        </p>
+    </div>
+
+    <script>
+        // Function to toggle dropdown menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById('dropdown-links');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
 
 
 
