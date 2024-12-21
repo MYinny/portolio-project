@@ -5,72 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Yin</title>
     <style>
-        /* Style for the entire page */
+        /* General body styling */
         body {
-            font-family: 'Arial', sans-serif; /* Sets the font family */
-            margin: 0; /* Removes default browser margin */
-            padding: 20px; /* Adds spacing around the content */
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark text color */
-            text-align: center; /* Centers text horizontally */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        /* Style for the header */
+        /* Navigation bar styling */
+        nav {
+            background-color: #0077cc;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdd57; /* Highlight color on hover */
+        }
+
+        /* Page header */
         h1 {
-            color: #0077cc; /* Light blue color for the title */
-            font-size: 3em; /* Makes the title text larger */
-            text-transform: uppercase; /* Converts text to uppercase */
-            margin-bottom: 20px; /* Adds spacing below the header */
-            border-bottom: 2px solid #0077cc; /* Adds an underline effect */
-            display: inline-block; /* Ensures underline fits the text width */
-            padding-bottom: 5px; /* Adds spacing between text and underline */
+            text-align: center;
+            color: #0077cc;
+            margin: 20px 0;
         }
 
-        /* Style for the paragraph */
-        p {
-            font-size: 1.2em; /* Makes the text slightly larger */
-            line-height: 1.6; /* Adds spacing between lines */
-            max-width: 600px; /* Limits the paragraph width */
-            margin: 0 auto; /* Centers the paragraph */
-        }
-
-        /* Style for a button */
-        .button {
-            display: inline-block; /* Makes the button behave like an inline element */
-            background-color: #0077cc; /* Blue background */
-            color: white; /* White text color */
-            padding: 10px 20px; /* Adds spacing inside the button */
-            text-decoration: none; /* Removes underline */
-            border-radius: 5px; /* Adds rounded corners */
-            font-size: 1em; /* Adjusts the button's font size */
-            margin-top: 20px; /* Adds spacing above the button */
-            transition: background-color 0.3s; /* Smooth hover effect */
-        }
-
-        /* Button hover effect */
-        .button:hover {
-            background-color: #005fa3; /* Darker blue on hover */
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em; /* Makes the header smaller on small screens */
-            }
-            p {
-                font-size: 1em; /* Adjusts paragraph font size for readability */
-            }
+        /* Page content */
+        .content {
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Michael Yin</h1>
-    <p>
-        Welcome to the personal page of Michael Yin. This example showcases 
-        HTML and CSS basics for building a simple, styled web page. 
-        Experiment with the code to learn more about web development!
-    </p>
-    <a href="https://example.com" class="button">Learn More</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">Michael Yin</a>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="photography.html">Photography</a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <h1>Welcome to Michael Yin's Website</h1>
+    <div class="content">
+        <p>
+            This is the home page. Use the navigation bar above to explore 
+            other sections of the site!
+        </p>
+    </div>
 </body>
 </html>
+
 
