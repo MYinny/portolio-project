@@ -32,11 +32,12 @@
             margin: 10px 0;
             padding: 5px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav a:hover {
             background-color: #f4f4f4; /* Light gray background on hover */
+            color: #0077cc; /* Blue text on hover */
         }
 
         /* Logo styling */
@@ -83,12 +84,12 @@
             }
         }
 
-        /* Default state: hide dropdown menu and button */
+        /* Default state: hide dropdown menu button */
         .dropdown-menu {
             display: none; /* Hide by default */
         }
 
-        /* Show dropdown menu links when toggled */
+        /* Dropdown links styling */
         .dropdown-links {
             display: none; /* Initially hidden */
             position: absolute;
@@ -111,6 +112,12 @@
 
         .dropdown-links a:hover {
             background-color: #f4f4f4;
+            color: #0077cc; /* Blue text on hover */
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
         }
     </style>
 </head>
@@ -118,28 +125,51 @@
     <!-- Sidebar Navigation -->
     <nav>
         <div class="logo">Michael Yin</div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="photography.html">Photography</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#photography">Photography</a>
     </nav>
 
     <!-- Dropdown Menu for Small Screens -->
     <div class="dropdown-menu" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-links" id="dropdown-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="photography.html">Photography</a>
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About Me</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#photography" onclick="toggleMenu()">Photography</a>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>
-            This is a simple and minimalist design. The navigation bar appears on the left for larger screens 
-            and switches to a dropdown menu on smaller screens. Explore the sections to learn more!
-        </p>
+        <section id="home">
+            <h1>Welcome to My Website</h1>
+            <p>
+                This is a simple and minimalist design. The navigation bar appears on the left for larger screens 
+                and switches to a dropdown menu on smaller screens. Explore the sections to learn more!
+            </p>
+        </section>
+
+        <section id="about">
+            <h1>About Me</h1>
+            <p>
+                Here is the About Me section. Use the menu to navigate to other sections.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <p>
+                Here is the Projects section. Use the menu to navigate to other sections.
+            </p>
+        </section>
+
+        <section id="photography">
+            <h1>Photography</h1>
+            <p>
+                Here is the Photography section. Use the menu to navigate to other sections.
+            </p>
+        </section>
     </div>
 
     <script>
@@ -155,6 +185,7 @@
     </script>
 </body>
 </html>
+
 
 
 
