@@ -7,55 +7,66 @@
     <style>
         /* General body styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Default font is Arial */
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
         }
 
         /* Navigation bar styling */
         nav {
-            background-color: #0077cc;
-            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
         }
 
-        nav a {
-            color: white;
+        /* Logo styling */
+        .logo {
+            font-family: "Courier New", Courier, monospace; /* Typewriter font */
+            font-size: 1.5em;
+            font-weight: bold;
             text-decoration: none;
+            color: black; /* Ensures the logo is black */
+        }
+
+        /* Navigation links styling */
+        .nav-links a {
+            color: black; /* Black font for links */
+            text-decoration: none; /* No underline */
             margin: 0 10px;
             font-size: 1.2em;
-            font-weight: bold;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #ffdd57; /* Highlight color on hover */
+        .nav-links a:hover {
+            text-decoration: underline; /* Underline on hover for clarity */
+        }
+
+        /* Content styling */
+        .content {
+            text-align: left; /* Align text to the left */
+            max-width: 800px; /* Limit content width for better readability */
+            margin: 0 auto; /* Center content horizontally */
         }
 
         /* Page header */
         h1 {
-            text-align: center;
-            color: #0077cc;
-            margin: 20px 0;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
-        /* Page content */
-        .content {
-            text-align: center;
-            padding: 20px;
+        /* Paragraph styling */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6; /* Add spacing between lines */
         }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">
-            <a href="index.html">Michael Yin</a>
-        </div>
+        <a href="index.html" class="logo">Michael Yin</a>
         <div class="nav-links">
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
@@ -64,14 +75,16 @@
     </nav>
 
     <!-- Page Content -->
-    <h1>Welcome to Michael Yin's Website</h1>
     <div class="content">
+        <h1>Welcome to My Website</h1>
         <p>
-            This is the home page. Use the navigation bar above to explore 
-            other sections of the site!
+            This is a simple and minimalist design. The page uses a clean white background 
+            with black text. The "Michael Yin" logo is styled in a typewriter font, 
+            while the rest of the page uses Arial for a modern and professional look.
         </p>
     </div>
 </body>
 </html>
+
 
 
