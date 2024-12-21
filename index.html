@@ -28,8 +28,9 @@
         nav a {
             text-decoration: none;
             color: black; /* Black font for links */
-            font-size: 1.2em;
+            font-size: 1em;
             margin: 10px 0;
+            margin-left: 20px;
             padding: 5px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
@@ -45,26 +46,29 @@
             font-family: "Courier New", Courier, monospace; /* Typewriter font */
             font-size: 2em; /* Slightly larger logo font size */
             font-weight: bold;
+            margin-left: 25px;
             margin-bottom: 20px;
         }
 
         /* Content styling */
         .content {
             flex: 1; /* Take up remaining space */
-            padding: 20px;
+            padding: 5px;
         }
 
         h1 {
             font-size: 1.5em; /* Smaller header text size */
+            margin-left: 25px;
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.6;
+            margin-left: 25px;
         }
 
-        /* Responsive Design: Hide sidebar on small screens */
+        /* Responsive Design: Adjust for small screens */
         @media (max-width: 768px) {
             nav {
                 display: none; /* Hide the sidebar */
@@ -82,36 +86,31 @@
                 cursor: pointer;
                 z-index: 1000; /* Ensure it stays on top */
             }
-        }
 
-        /* Default state: dropdown menu hidden */
-        .dropdown-menu {
-            display: none; /* Hidden by default on large screens */
-        }
+            #dropdown-links {
+                display: none; /* Initially hide dropdown links */
+                position: fixed;
+                top: 50px;
+                left: 10px;
+                background-color: #ffffff; /* White background */
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+                z-index: 1000;
+            }
 
-        .dropdown-links {
-            display: none; /* Initially hidden */
-            position: fixed;
-            top: 50px;
-            left: 10px;
-            background-color: #ffffff; /* White background */
-            border: 1px solid #ddd; /* Subtle border */
-            border-radius: 5px;
-            padding: 10px;
-            z-index: 1000;
-        }
+            #dropdown-links a {
+                display: block;
+                margin: 5px 0;
+                text-decoration: none;
+                color: black;
+                padding: 5px;
+            }
 
-        .dropdown-links a {
-            display: block;
-            margin: 5px 0;
-            text-decoration: none;
-            color: black;
-            padding: 5px;
-        }
-
-        .dropdown-links a:hover {
-            background-color: #f4f4f4;
-            color: #0077cc; /* Blue text on hover */
+            #dropdown-links a:hover {
+                background-color: #f4f4f4;
+                color: #0077cc; /* Blue text on hover */
+            }
         }
     </style>
 </head>
@@ -126,7 +125,7 @@
     </nav>
 
     <!-- Dropdown Menu for Small Screens -->
-    <div class="dropdown-menu">☰ Menu</div>
+    <div class="dropdown-menu" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-links" id="dropdown-links">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
@@ -138,7 +137,7 @@
     <div class="content">
         <section id="home">
             <h1>Welcome</h1>
-            <p>This is the home section of the website.</p>
+            <p>Welcome to my website. You can find more information about myself, my projects, and my photography portfolio.</p>
         </section>
     </div>
 
@@ -146,12 +145,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
