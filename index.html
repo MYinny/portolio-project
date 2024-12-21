@@ -7,19 +7,36 @@
     <style>
         /* General body styling */
         body {
-            font-family: Arial, sans-serif; /* Default font is Arial */
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #ffffff; /* White background */
             color: #000000; /* Black text */
+            display: flex; /* Flexbox layout for body */
         }
 
-        /* Navigation bar styling */
+        /* Sidebar navigation styling */
         nav {
+            width: 250px;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            border-right: 1px solid #ddd; /* Subtle border on the right */
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            flex-direction: column;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black; /* Black font for links */
+            font-size: 1.2em;
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f4f4f4; /* Light gray background on hover */
         }
 
         /* Logo styling */
@@ -27,64 +44,113 @@
             font-family: "Courier New", Courier, monospace; /* Typewriter font */
             font-size: 1.5em;
             font-weight: bold;
-            text-decoration: none;
-            color: black; /* Ensures the logo is black */
-        }
-
-        /* Navigation links styling */
-        .nav-links a {
-            color: black; /* Black font for links */
-            text-decoration: none; /* No underline */
-            margin: 0 10px;
-            font-size: 1.2em;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline; /* Underline on hover for clarity */
+            margin-bottom: 20px;
         }
 
         /* Content styling */
         .content {
-            text-align: left; /* Align text to the left */
-            max-width: 800px; /* Limit content width for better readability */
-            margin: 0 auto; /* Center content horizontally */
+            flex: 1; /* Take up remaining space */
+            padding: 20px;
         }
 
-        /* Page header */
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
         }
 
-        /* Paragraph styling */
         p {
             font-size: 1.2em;
-            line-height: 1.6; /* Add spacing between lines */
+            line-height: 1.6;
+        }
+
+        /* Responsive Design: Hide sidebar on small screens */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Hide the sidebar */
+            }
+
+            .dropdown-menu {
+                display: block; /* Show the dropdown button */
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                background-color: #ffffff; /* White background */
+                border: 1px solid #ddd; /* Subtle border */
+                border-radius: 5px;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 1000; /* Ensure it stays on top */
+            }
+        }
+
+        /* Show dropdown menu links when toggled */
+        .dropdown-links {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #ffffff; /* White background */
+            border: 1px solid #ddd; /* Subtle border */
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .dropdown-links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+        }
+
+        .dropdown-links a:hover {
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Sidebar Navigation -->
     <nav>
-        <a href="index.html" class="logo">Michael Yin</a>
-        <div class="nav-links">
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="photography.html">Photography</a>
-        </div>
+        <div class="logo">Michael Yin</div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Dropdown Menu for Small Screens -->
+    <div class="dropdown-menu" onclick="toggleMenu()">☰ Menu</div>
+    <div class="dropdown-links" id="dropdown-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+    </div>
+
+    <!-- Main Content -->
     <div class="content">
         <h1>Welcome to My Website</h1>
         <p>
-            This is a simple and minimalist design. The page uses a clean white background 
-            with black text. The "Michael Yin" logo is styled in a typewriter font, 
-            while the rest of the page uses Arial for a modern and professional look.
+            This is a simple and minimalist design. The navigation bar appears on the left for larger screens 
+            and switches to a dropdown menu on smaller screens. Explore the sections to learn more!
         </p>
     </div>
+
+    <script>
+        // Function to toggle dropdown menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById('dropdown-links');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
+
 
 
 
