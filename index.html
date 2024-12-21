@@ -5,29 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Yin</title>
     <style>
+        /* Style for the entire page */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #ffffff; /* Set background to white */
-            color: #333;
-            text-align: center; /* Center the text */
+            font-family: 'Arial', sans-serif; /* Sets the font family */
+            margin: 0; /* Removes default browser margin */
+            padding: 20px; /* Adds spacing around the content */
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text color */
+            text-align: center; /* Centers text horizontally */
         }
+
+        /* Style for the header */
         h1 {
-            color: #0077cc;
+            color: #0077cc; /* Light blue color for the title */
+            font-size: 3em; /* Makes the title text larger */
+            text-transform: uppercase; /* Converts text to uppercase */
+            margin-bottom: 20px; /* Adds spacing below the header */
+            border-bottom: 2px solid #0077cc; /* Adds an underline effect */
+            display: inline-block; /* Ensures underline fits the text width */
+            padding-bottom: 5px; /* Adds spacing between text and underline */
         }
+
+        /* Style for the paragraph */
         p {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 1.2em; /* Makes the text slightly larger */
+            line-height: 1.6; /* Adds spacing between lines */
+            max-width: 600px; /* Limits the paragraph width */
+            margin: 0 auto; /* Centers the paragraph */
+        }
+
+        /* Style for a button */
+        .button {
+            display: inline-block; /* Makes the button behave like an inline element */
+            background-color: #0077cc; /* Blue background */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Adds spacing inside the button */
+            text-decoration: none; /* Removes underline */
+            border-radius: 5px; /* Adds rounded corners */
+            font-size: 1em; /* Adjusts the button's font size */
+            margin-top: 20px; /* Adds spacing above the button */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #005fa3; /* Darker blue on hover */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Makes the header smaller on small screens */
+            }
+            p {
+                font-size: 1em; /* Adjusts paragraph font size for readability */
+            }
         }
     </style>
 </head>
 <body>
     <h1>Michael Yin</h1>
     <p>
-        Welcome to the personal page of Michael Yin. This is a simple HTML example 
-        showcasing how to structure a web page. HTML is used for content, while 
-        CSS styles make the page look better!
+        Welcome to the personal page of Michael Yin. This example showcases 
+        HTML and CSS basics for building a simple, styled web page. 
+        Experiment with the code to learn more about web development!
     </p>
+    <a href="https://example.com" class="button">Learn More</a>
 </body>
 </html>
+
