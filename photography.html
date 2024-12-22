@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Michael Yin</title>
     <style>
         /* General Reset */
@@ -185,14 +186,42 @@
             background-color: #005fa3;
         }
 
+        /* Social Media */
+        .fa {
+            padding: 10px;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 75%;
+            margin: 5px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-instagram {
+            background: #405de6;
+            background: linear-gradient(
+                to right,
+                #833ab4,#fd1d1d,#fcb045
+            );
+            color: white;
+        }
+        
+        .fa-linkedin {
+            background: #0077b5;
+            color: white;
+        }
 
         /* Footer */
         .footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
         }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -264,6 +293,10 @@
                     <h3>Personal Website</h3>
                     <p>Showcasing progress in front-end and back-end development.</p>
                 </div>
+                <div class="project-card">
+                    <h3>Photography</h3>
+                    <p>Freelance work over the past few years.</p>
+                </div>
             </div>
         </section>
 
@@ -272,6 +305,11 @@
             <br>
             <br>
             <a href="mailto:michael.a.yin@icloud.com" class="cta-button">Email</a>
+            <br>
+            <br>
+            <br>
+            <a href="https://www.instagram.com/myinny/" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/michaelayin/" class="fa fa-linkedin"></a>
         </section>
     </main>
 
