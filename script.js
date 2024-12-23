@@ -1,50 +1,35 @@
-// Function to toggle the dropdown menu visibility
-function toggleMenu() {
-    const menu = document.getElementById('dropdown-links');
-    if (menu.style.display === 'none' || menu.style.display === '') {
-        menu.style.display = 'block'; // Show the menu
-    } else {
-        menu.style.display = 'none'; // Hide the menu
-    }
-}
+// Toggle the navigation menu for small screens
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
 
-// Attach the click event to the dropdown menu button
-document.querySelector('.dropdown-menu').addEventListener('click', toggleMenu);
+// Add event listener to toggle dropdown menu
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show'); // Add or remove 'show' class
+});
 
-// Smooth scrolling for links (if pointing to sections within the same page)
-document.querySelectorAll('nav a, .dropdown-links a').forEach(anchor => {
+// Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const hrefValue = this.getAttribute('href');
-        if (hrefValue.startsWith('#')) {
-            e.preventDefault(); // Prevent default behavior if it's a section link
-            const targetId = hrefValue.substring(1);
-            const targetElement = document.getElementById(targetId);
+        e.preventDefault(); // Prevent default link behavior
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        const target = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Close the dropdown menu after clicking a link (small screens only)
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('show');
         }
     });
 });
 
-// Highlight active link based on the visible section
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= 150) {
-            // Highlight the corresponding nav link
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === section.id) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('show');
+    }
 });
