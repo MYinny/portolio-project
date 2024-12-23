@@ -3,39 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Michael Yin - Resume</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: #333;
         }
-
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        h1, h2 {
+            color: #444;
+        }
         h1 {
-            margin: 20px;
+            font-size: 25px;
+            margin-bottom: 10px;
             text-align: center;
         }
-
-        .pdf-container {
-            width: 100%;
-            max-width: 800px;
-            height: 90vh; /* Takes up 90% of the viewport height */
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        h2 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        hr.solid {
+             border-top: 0 solid #ccc;
+        }
+        .section {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .work-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+        .work-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .work-left {
+            text-align: left;
+        }
+        .work-right {
+            text-align: right;
+        }
+        .work-left h3, .work-left p, .work-right p {
+            margin: 0;
+            font-size: 16px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .skills, .interests {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+        .skills div, .interests div {
+            margin-right: 15px;
         }
     </style>
 </head>
 <body>
-
-    <iframe
-        src="https://drive.google.com/file/d/1mWmNBd8ua2c3I-PM52ewBqsBI0Mu2t1z/preview"
-        class="pdf-container"
-        allow="autoplay"
-    ></iframe>
+    <div class="container">
+        <h1>Michael Yin</h1>
+        <div class="contact-info">
+            <p>Email: michael.a.yin@icloud.com | Phone: 778-996-8159 | LinkedIn: <a href="https://linkedin.com/in/michaelayin" target="_blank">michaelayin</a> | Location: Vancouver, BC</p>
+        </div>
+        <hr class="solid">
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>Highly organized and detail-oriented professional with a strong background in project management and a passion for technology...</p>
+        </div>
+        <hr class="solid">
+        <div class="section">
+            <h2>Work Experience</h2>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>Informa Financial & Insurance Services Inc.</h3>
+                        <p>Account Executive and Customer Service Representative</p>
+                    </div>
+                    <div class="work-right">
+                        <p>2023 – 2024</p>
+                        <p>Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Building relationships with prospective clients and managing existing clients with their group benefits...</li>
+            </ul>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>Glentel Inc.</h3>
+                        <p>Jr. I.T. Administrator & Jr. Networking Administrator (MIS Group)</p>
+                    </div>
+                    <div class="work-right">
+                        <p>2016 – 2017</p>
+                        <p>Burnaby, BC</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Provided technical support to company employees and Glentel telecom subsidiaries across the country...</li>
+            </ul>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>Vancouver Coastal Health (CST Project)</h3>
+                        <p>Business Analyst</p>
+                    </div>
+                    <div class="work-right">
+                        <p>2019 – 2022</p>
+                        <p>Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Managed a portfolio of over 10 medical specialties...</li>
+            </ul>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>Freelance Photographer</h3>
+                        <p>Photographer</p>
+                    </div>
+                    <div class="work-right">
+                        <p>Present</p>
+                        <p>Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Generated client base through various leads...</li>
+            </ul>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>TEDxQueensU & DECA Queen’s</h3>
+                        <p>Sponsorship Director & Corporate Relations Director</p>
+                    </div>
+                    <div class="work-right">
+                        <p>2016 – 2018</p>
+                        <p>Kingston, ON</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Effectively raised sponsorship funds...</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="work-item">
+                <div class="work-row">
+                    <div class="work-left">
+                        <h3>Queen’s University</h3>
+                        <p>Bachelor of Sciences, Life Sciences</p>
+                    </div>
+                    <div class="work-right">
+                        <p>2014 – 2018</p>
+                        <p>Kingston, ON</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>Dean’s Honour List, 2014-2017 (GPA of 3.75 or above) with a full course load.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>Troubleshooting</div>
+                <div>Server management</div>
+                <div>Python</div>
+                <div>SQL</div>
+                <div>Technology expertise</div>
+                <div>Project management</div>
+                <div>Active Directory</div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Interests</h2>
+            <div class="interests">
+                <div>Media servers</div>
+                <div>Home automation</div>
+                <div>Soccer</div>
+                <div>Photography</div>
+                <div>Travel</div>
+                <div>Fantasy sports</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
-
