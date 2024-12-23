@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <script src="assets/pdfjs/pdf.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #pdf-viewer {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Resume</h1>
+    <div id="pdf-viewer"></div>
+    <script>
+        // URL to the PDF file
+        const pdfUrl = 'assets/pdfs/resume.pdf';
+
+        // PDF.js global worker configuration
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/pdfjs/pdf.worker.js';
+
+        // Get the viewer container
+        const viewer = document.getElementById('pdf-viewer');
+
+        // Load the PDF
+        pdfjsLib.getDocument(pdfUrl).promise.then((pdf) => {
+            // Render each page of the PDF
+            for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                pdf.getPage(pageNumber).then((page) => {
+                    // Create a canvas for the page
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    viewer.appendChild(canvas);
+
+                    // Set the scale for the PDF
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale });
+
+                    // Set canvas dimensions
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+
+                    // Render the page
+                    page.render({
+                        canvasContext: context,
+                        viewport: viewport,
+                    });
+                });
+            }
+        }).catch((error) => {
+            console.error('Error loading PDF:', error);
+            viewer.innerHTML = '<p>Failed to load the PDF file. Please try again later.</p>';
+        });
+    </script>
+</body>
+</html>
+
