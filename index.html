@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: none;
         }
 
         body {
@@ -136,6 +137,8 @@
             padding: 4rem 2rem;
             background-color: #f4f4f4;
             text-align: center;
+            color: #333;
+            text-decoration: none;
         }
 
         .projects h2 {
@@ -164,6 +167,17 @@
         .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            color: #333;
+            cursor:pointer;
+            transition: 0.3s; 
+        }
+
+        .project-links a:hover {
+            color: #0077cc;
         }
 
         /* Contact Section */
@@ -253,7 +267,6 @@
         <nav class="navbar">
             <div class="logo">MICHAEL YIN</div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -295,8 +308,11 @@
                     <p>Showcasing progress in front-end and back-end development.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Photography</h3>
-                    <p>Freelance work over the past few years.</p>
+                    <div class="project-links">
+                        <a href="photography.html"><h3>Photography</h3>
+                        <p>Freelance work over the past few years.</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

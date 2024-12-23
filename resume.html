@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Yin - Resume</title>
+    <title>Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,15 +13,15 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 75px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #fff;
         }
         h1, h2 {
-            color: #444;
+            color: #333;
         }
         h1 {
             font-size: 25px;
@@ -35,6 +35,31 @@
         hr.solid {
              border-top: 0 solid #ccc;
         }
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2rem;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .logo a {
+            text-decoration: none;
+            color: #333;
+        }
+        .logo a:hover {
+            color: #0077cc;
+        }
         .section {
             margin-bottom: 20px;
             font-size: 16px;
@@ -43,13 +68,36 @@
             margin-bottom: 15px;
             text-align: center;
         }
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-left {
+            text-align: left;
+        }
+        .contact-right {
+            text-align: right;
+        }
+        .contact-left h3, .contact-left p, .contact-right p {
+            margin: 0;
+            font-size: 16px;
+        }
         .contact-info p {
             margin: 5px 0;
+        }
+        .contact-info a {
+            color: #0077cc;
+        }
+        .headshot img {
+            width: 30%;
+            height: auto;
+            border-radius: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .work-item {
             display: flex;
             flex-direction: column;
-            margin-bottom: 16px;
         }
         .work-row {
             display: flex;
@@ -71,7 +119,7 @@
             padding-left: 20px;
         }
         ul li {
-            margin-bottom: 10px;
+
             font-size: 16px;
         }
         .skills, .interests {
@@ -85,15 +133,41 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><p>MICHAEL YIN</p></a>
+            </div>
+        </nav>
+    </header>
     <div class="container">
-        <h1>Michael Yin</h1>
         <div class="contact-info">
-            <p>Email: michael.a.yin@icloud.com | Phone: 778-996-8159 | LinkedIn: <a href="https://linkedin.com/in/michaelayin" target="_blank">michaelayin</a> | Location: Vancouver, BC</p>
+            <div class="contact-row">
+                <div class="contact-left">
+                    <div class="headshot">
+                        <a href="assets\images\headshot.jpg" data-lightbox="headshot" data-title="Michael Yin">
+                            <img src="assets\images\headshot.jpg" alt="Michael Yin">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <p>Email: <a href="mailto:michael.a.yin@icloud.com">michael.a.yin@icloud.com</a></p>
+                    <p>Phone: 778-996-8159</p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/michaelayin" target="_blank">michaelayin</a></p>
+                    <p>Vancouver, BC</p>
+                </div>
+            </div>
         </div>
         <hr class="solid">
         <div class="section">
             <h2>Professional Summary</h2>
-            <p>Highly organized and detail-oriented professional with a strong background in project management and a passion for technology...</p>
+            <p>Highly organized and detail-oriented professional with a strong background in project
+                management and a passion for technology. Proven success in coordinating complex projects,
+                optimizing processes, and delivering exceptional client service. Skilled in analyzing data and
+                implementing effective solutions. Strong communication and technological proficiency. Exploring a
+                meaningful career change into the technology industry to better align with my abilities and
+                passion. As a technology hobbyist, I enjoy working with the latest tools and technology, and
+                providing technology support and teachings to those that need it.</p>
         </div>
         <hr class="solid">
         <div class="section">
@@ -111,7 +185,12 @@
                 </div>
             </div>
             <ul>
-                <li>Building relationships with prospective clients and managing existing clients with their group benefits...</li>
+                <li>Building relationships with prospective clients and managing existing clients with their group
+                benefits.</li>
+                <li>Act as the primary contact for Chambers Plan related questions and assist with administrative
+                    inquiries.</li>
+                <li>Coordinating internal tasks related to accounts to ensure that clients receive their products and
+                    services.</li>
             </ul>
             <div class="work-item">
                 <div class="work-row">
@@ -126,7 +205,14 @@
                 </div>
             </div>
             <ul>
-                <li>Provided technical support to company employees and Glentel telecom subsidiaries across the country...</li>
+                <li>Provided technical support to company employees and Glentel telecom subsidiaries across the
+                    country (i.e. Wireless Wave, Costco Mobile, TBooth, etc…)</li>
+                <li>Performed computer imaging and mass deployment of software.</li>
+                <li>Built and repaired company computers and printers.</li>
+                <li>Modified and installed SonicWALL routers; prepared and modified Oxygen / Agilink modems.</li>
+                <li>Managed several company projects including the mass deployment of company assets worth
+                in excess of $125,000.</li>
+                <li>Utilized Active Directory, Microsoft Dynamics AX, Sophos, MacOS, Windows, and Linux.</li>
             </ul>
             <div class="work-item">
                 <div class="work-row">
@@ -141,13 +227,20 @@
                 </div>
             </div>
             <ul>
-                <li>Managed a portfolio of over 10 medical specialties...</li>
+                <li>Managed a portfolio of over 10 medical specialties, which totaled over 150 medical procedures
+                    (PowerPlans).</li>
+                <li>Organized sessions with healthcare professionals for information gathering, design of product,
+                    final validation, and deployment of their requested products.</li>
+                <li>Coordinated interdepartmental tasks and communications to ensure project milestones were
+                completed.</li>
+                <li>Conducted gap analyses, identified areas for improvement, and implemented process
+                    enhancements.</li>
+                <li>Successfully led two key deployment projects of PowerPlans at multiple Vancouver Hospitals.</li>
             </ul>
             <div class="work-item">
                 <div class="work-row">
                     <div class="work-left">
                         <h3>Freelance Photographer</h3>
-                        <p>Photographer</p>
                     </div>
                     <div class="work-right">
                         <p>Present</p>
@@ -156,7 +249,11 @@
                 </div>
             </div>
             <ul>
-                <li>Generated client base through various leads...</li>
+                <li>Generated client base through various leads.</li>
+                <li>Provided excellent customer service and photo quality.</li>
+                <li>Active listening to ensure the client’s needs and desires were met while I captured their special
+                    moments.</li>
+                <li>Performed photoshoots for portraits, events, landscape, engagements, etc...</li>
             </ul>
             <div class="work-item">
                 <div class="work-row">
@@ -171,9 +268,13 @@
                 </div>
             </div>
             <ul>
-                <li>Effectively raised sponsorship funds...</li>
+                <li>Effectively raised sponsorship funds from previous partnerships and new sponsor acquisitions.</li>
+                <li>Collaborated with the executive team in the organization and execution of a successful
+                    conference.</li>
+                <li>Developed compelling value propositions to secure commitments from renowned speakers.</li>
             </ul>
         </div>
+        <hr class="solid">
         <div class="section">
             <h2>Education</h2>
             <div class="work-item">
@@ -190,31 +291,33 @@
             </div>
             <ul>
                 <li>Dean’s Honour List, 2014-2017 (GPA of 3.75 or above) with a full course load.</li>
+                <li>Actively participated in intramural sports including soccer, hockey, and ultimate frisbee.</li>
             </ul>
         </div>
+        <hr class="solid">
         <div class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <div>Troubleshooting</div>
-                <div>Server management</div>
-                <div>Python</div>
-                <div>SQL</div>
-                <div>Technology expertise</div>
-                <div>Project management</div>
-                <div>Active Directory</div>
+                <p>Troubleshooting; server management; customer service; Python; SQL; technology
+                    expertise; computer building, imaging, and management; iOS, MacOS, Windows, Linux
+                    proficiency; audiovisual technical proficiency; Adobe Lightroom Classic; project management;
+                    cross-functional communication; time management; administrative support; SOP management
+                    and documentation; active listening; bilingual (French and English); Microsoft Office programs;
+                    collaboration; scheduling & coordination.
+                </p>
             </div>
         </div>
         <div class="section">
             <h2>Interests</h2>
             <div class="interests">
-                <div>Media servers</div>
-                <div>Home automation</div>
-                <div>Soccer</div>
-                <div>Photography</div>
-                <div>Travel</div>
-                <div>Fantasy sports</div>
+                <p>Technology; media servers; home automation; troubleshooting; computer building
+                    and repairs; home theatre technology; iOS; Android; Proxmox; Ubuntu; Windows; MacOS;
+                    networking; IT hardware; puzzles; soccer; hockey; ultimate frisbee; travel; photography;
+                    photography editing; fantasy sports specialist.
+                </p>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
