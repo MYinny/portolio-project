@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Resume</title>
     <style>
         body {
@@ -89,6 +90,44 @@
         .contact-info a {
             color: #0077cc;
         }
+        .download-btn {
+            display: inline-block;
+            text-align: center;
+            padding: 5px 20px;
+            margin-bottom: 15px;
+            background-color: #0077cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .download-btn:hover {
+            background-color: #005bb5;
+            transition-duration: 0.3s;
+        }
+        .download-btn a {
+            color: white;
+            text-decoration: none;
+        }
+        .linkedin-btn {
+            display: inline-block;
+            text-align: center;
+            padding: 5px 20px;
+            margin-bottom: 15px;
+            background-color: #0077B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .linkedin-btn:hover {
+            background-color: #005bb5;
+            transition-duration: 0.3s;
+        }
+        .linkedin-btn a {
+            color: white;
+            text-decoration: none;
+        }
         .headshot img {
             width: 30%;
             height: auto;
@@ -151,8 +190,14 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <p>LinkedIn: <a href="https://linkedin.com/in/michaelayin" target="_blank">michaelayin</a></p>
-                    <p>Vancouver, BC</p>
+                    <button class="download-btn">
+                        <i class="fa fa-download"></i>
+                            <a href="resume.pdf" download>Resume</a>
+                    </button>
+                    <button class="linkedin-btn">
+                        <i class="fa fa-linkedin-square"></i>
+                            <a href="https://linkedin.com/in/michaelayin">LinkedIn</a>
+                    </button>
                 </div>
             </div>
         </div>
